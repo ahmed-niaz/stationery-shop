@@ -6,18 +6,29 @@ const createProducts = async (payload: IProducts): Promise<IProducts> => {
   return result;
 };
 
-const getProducts = async() => {
-    const result = await Products.find()
-    return result
-}
+const getProducts = async () => {
+  const result = await Products.find();
+  return result;
+};
 
-const singleProduct = async(id:string) =>{
-    const result = await Products.findById(id)
-    return result
-}
+const singleProduct = async (id: string) => {
+  const result = await Products.findById(id);
+  return result;
+};
+
+const updateProduct = async (id: string, payload: IProducts) => {
+  payload.updatedAt = new Date();
+  const result = await Products.findByIdAndUpdate(
+    id,
+    { $set: payload },
+    { new: true },
+  );
+  return result;
+};
 
 export const productService = {
   createProducts,
   getProducts,
-  singleProduct
+  singleProduct,
+  updateProduct,
 };
