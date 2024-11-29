@@ -26,9 +26,15 @@ const updateProduct = async (id: string, payload: IProducts) => {
   return result;
 };
 
+const deleteProduct = async (id: string) => {
+  const result = await Products.findByIdAndDelete(id);
+  return result;
+};
+
 export const productService = {
   createProducts,
   getProducts,
   singleProduct,
   updateProduct,
+  deleteProduct,
 };
