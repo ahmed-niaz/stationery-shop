@@ -2,14 +2,14 @@
 
 **\_Using TypeScript to create an Express application, integrating MongoDB with Mongoose to run a stationery Shop,and use Mongoose schema validation to guarantee data integrity.**
 
-## 💡**_Features_**
+## 💡 **_Features_**
 
 - **_TypeScript_** The application is built with TypeScript to ensure type safety and better maintainability.
 - **_Express-based API_** The application exposes RESTful API endpoints to manage stationery products & orders.
 - **_MongoDB Integration_** MongoDB is used as the database to store stationery products & order information.
 - **_Mongoose Schema Validation_** Mongoose schema validation ensures data integrity by enforcing data types, required fields, and custom validation rules.
 
-## ⚡**_Project Setup_**
+## ⚡ **_Project Setup_**
 
 ### **_prerequisites_**
 
@@ -73,7 +73,7 @@ yarn start
 npm run start
 ```
 
-✨**_Api Endpoints_**
+✨ **_Api Endpoints_**
 
 - **_`/api/products`_**
 
