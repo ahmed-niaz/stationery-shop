@@ -26,7 +26,8 @@ const createOrder = async (payload: IOrders) => {
 
     return result;
   } catch (error) {
-    console.error(error);
+    console.error('Error processing order:', error.message);
+    throw new Error(`Order processing failed: ${error.message}`);
   }
 };
 
